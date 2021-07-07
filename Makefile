@@ -3,6 +3,7 @@ VENV=.env
 BIN=$(CUR_DIR)/$(VENV)/Scripts/
 FASTAPI=fastapi
 BLACKSHEEP=blacksheep
+FLASK=flask
 
 .PHONY: clean
 clean:
@@ -22,6 +23,7 @@ freeze:
 test:
 	$(BIN)pytest $(FASTAPI)
 	$(BIN)pytest $(BLACKSHEEP)
+	$(BIN)pytest $(FLASK)
 
 # Run FastApi version
 .PHONY: fastapi
@@ -32,3 +34,8 @@ fastapi:
 .PHONY: blacksheep
 blacksheep:
 	$(BIN)uvicorn --app-dir $(BLACKSHEEP) --no-use-colors app.main:app --reload
+
+# Run Flask version
+.PHONY: flask
+flask:
+	cd $(FLASK) && $(BIN)flask run -h 0.0.0.0 -p 8000 --reload
