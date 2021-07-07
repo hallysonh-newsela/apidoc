@@ -1,6 +1,7 @@
 CUR_DIR=$(shell pwd)
 VENV=.env
 BIN=$(CUR_DIR)/$(VENV)/Scripts/
+FASTAPI=fastapi
 BLACKSHEEP=blacksheep
 
 .PHONY: clean
@@ -19,7 +20,13 @@ freeze:
 	$(BIN)pip freeze > requirements.txt
 
 test:
+	$(BIN)pytest $(FASTAPI)
 	$(BIN)pytest $(BLACKSHEEP)
+
+# Run FastApi version
+.PHONY: fastapi
+fastapi:
+	$(BIN)uvicorn --app-dir $(FASTAPI) --no-use-colors app.main:app --reload
 
 # Run BlackSheep version
 .PHONY: blacksheep
