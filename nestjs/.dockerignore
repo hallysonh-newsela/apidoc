@@ -1,0 +1,6 @@
+README.md
+Dockerfile
+dist
+coverage
+node_modules
+.env

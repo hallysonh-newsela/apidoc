@@ -4,6 +4,7 @@ BIN=$(CUR_DIR)/$(VENV)/Scripts/
 FASTAPI=fastapi
 BLACKSHEEP=blacksheep
 FLASK=flask
+NESTJS=nestjs
 
 .PHONY: clean
 clean:
@@ -24,6 +25,7 @@ test:
 	$(BIN)pytest $(FASTAPI)
 	$(BIN)pytest $(BLACKSHEEP)
 	$(BIN)pytest $(FLASK)
+	cd $(NESTJS) && yarn test
 
 # Run FastApi version
 .PHONY: fastapi
@@ -39,3 +41,8 @@ blacksheep:
 .PHONY: flask
 flask:
 	cd $(FLASK) && $(BIN)flask run -h 0.0.0.0 -p 8000 --reload
+
+# Run NestJS version
+.PHONY: nestjs
+nestjs:
+	cd $(NESTJS) && yarn start:dev

@@ -31,3 +31,13 @@ services:
     environment:
       - FLASK_APP=app
       - FLASK_ENV=development
+
+  nestjs:
+    build: ./nestjs
+    command: npm run start:dev
+    volumes:
+      - ./nestjs:/usr/src/app
+    ports:
+      - 8004:8000
+    environment:
+      - ENVIRONMENT=development
