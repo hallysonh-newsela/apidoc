@@ -5,6 +5,7 @@ FASTAPI=fastapi
 BLACKSHEEP=blacksheep
 FLASK=flask
 NESTJS=nestjs
+DJANGO=django
 
 .PHONY: clean
 clean:
@@ -25,6 +26,7 @@ test:
 	$(BIN)pytest $(FASTAPI)
 	$(BIN)pytest $(BLACKSHEEP)
 	$(BIN)pytest $(FLASK)
+	cd $(DJANGO) && $(BIN)python manage.py test
 	cd $(NESTJS) && yarn test
 
 # Run FastApi version
@@ -41,6 +43,11 @@ blacksheep:
 .PHONY: flask
 flask:
 	cd $(FLASK) && $(BIN)flask run -h 0.0.0.0 -p 8000 --reload
+
+# Run Django version
+.PHONY: django
+nestjs:
+	cd $(DJANGO) && $(BIN)python manage.py runserver 0.0.0.0:8000
 
 # Run NestJS version
 .PHONY: nestjs

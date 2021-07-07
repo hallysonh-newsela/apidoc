@@ -61,3 +61,6 @@ watchgod==0.7
 webargs==8.0.0
 websockets==8.1
 Werkzeug==2.0.1
+Django==3.2.5
+djangorestframework==3.12.4
+uritemplate==3.0.1

@@ -1,0 +1,56 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "username": "hallyson.almeida",
+      "email": "hallysonh@gmail.com",
+      "first_name": "Hallyson",
+      "last_name": "Almeida",
+      "password": "pbkdf2_sha256$260000$rZXFC5T8EutVDWH6yNw6Yg$aGoXJYwKHt9XUn9zWXhyS6ZkB6urav43vglwSlT2aFg=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": [],
+      "last_login": "2021-07-07T00:00:00Z",
+      "date_joined": "2021-07-07T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "username": "mike.jonhson",
+      "email": "mike.jonhson.test@gmail.com",
+      "first_name": "Mike",
+      "last_name": "Jonhson",
+      "password": "pbkdf2_sha256$260000$rZXFC5T8EutVDWH6yNw6Yg$aGoXJYwKHt9XUn9zWXhyS6ZkB6urav43vglwSlT2aFg=",
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": [],
+      "last_login": "2021-07-07T00:00:00Z",
+      "date_joined": "2021-07-07T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "username": "john.rock",
+      "email": "john.rock.test@gmail.com",
+      "first_name": "John",
+      "last_name": "Rock",
+      "password": "pbkdf2_sha256$260000$rZXFC5T8EutVDWH6yNw6Yg$aGoXJYwKHt9XUn9zWXhyS6ZkB6urav43vglwSlT2aFg=",
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": [],
+      "last_login": "2021-07-07T00:00:00Z",
+      "date_joined": "2021-07-07T00:00:00Z"
+    }
+  }
+]
